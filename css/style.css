@@ -1,0 +1,206 @@
+/* css Variable */
+:root{
+    --black-color:#000;
+    --orange-color:#ff5722;
+    --black-list-color:#4d4d4d;
+    --balck-text-color:#333333;
+    --blue-color:#1974df;
+    --white-color:#fff;
+    --white-smok-color:#f8f8f8;
+    --gray-link-color:#545454;
+    --size-navlink:15px;
+}
+/* soft scroll */
+ html{
+     scroll-behavior: smooth;
+     font-size: 62.5%;
+ }
+/* css eset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: dana-fanum;
+    direction: rtl;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,ul,p{
+    margin: 0;
+}
+ul{
+    padding: 0;
+    list-style: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+header{
+    background-image: url(../img/banner.jpeg);
+    height: 67vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#menu-bar{
+    display: none;
+}
+header label{
+    font-size: 2.3rem;
+    display: none;
+}
+header .navbar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--white-smok-color);
+    padding: 1rem 0;
+}
+header .navbar ul li{
+    display: inline-block;
+    margin: 0 1.3rem;
+}
+header .navbar ul li a{
+    color: var(--gray-link-color);
+    font-size: var(--size-navlink);
+}
+header .navbar ul li a:hover{
+    color: var(--orange-color);
+}
+
+header .navbar ul button{
+    background-color: var(--orange-color);    
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .5ms;
+}
+header .navbar ul button a {
+    color: var(--white-color);
+    padding: 1rem 3rem;
+    display: inline-block;
+    font-size: 1.5rem;
+  }
+header .navbar ul button:hover{
+    transform: scale(.97);
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.content{
+    background-color: rgba(0, 0, 45, .5);
+    width: 530px;
+    height: 310px;
+    border-radius: 0 0 15px 15px;
+}
+.content h2,h4{
+    margin: 0 2rem;
+}
+.content h2{
+    color: var(--white-color);
+    font-size: 5rem;
+}
+.content h4{
+    color: var(--white-smok-color);
+    font-size: 2.2rem;
+}
+.btn-banner{
+    margin: 2.7rem 0;
+    text-align: center;
+}
+.btn-banner img{
+    position: absolute;
+    right: 8px;
+}
+.part-one a,.part-two a{
+    padding: 1.4rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    margin: .6rem;
+    width: 43%;
+    position: relative;
+}
+.part-one a{
+    background-color: var(--white-color);
+    color: var(--balck-text-color);
+}
+.part-two a{
+    border: 2px solid var(--white-smok-color);
+    color: var(--white-smok-color);
+}
+.map img{
+    max-width: 400px;
+    position: relative;
+    top: 13%;
+    left: -5%;
+}
+@media screen and (max-width:1024px) {
+    header {
+        background-size: cover;
+        background-position: 100%;
+      }
+    .map img{
+        display: none;
+    }
+}
+@media screen and (max-width:991px) {
+    nav ul button{
+        display: none;
+    }
+}
+@media screen and (max-width:768px) {
+   header{
+        height: 100vh;
+        background-position: unset;
+   }
+    header label{
+        display: initial;
+    }
+    header .navbar {
+        display: flex !important;
+        justify-content: space-between !important;
+        padding: 1.2rem 5.5rem;
+      }
+    .menu{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 200px;
+    }
+    #menu-bar:checked ~ .menu{
+        display: flex;
+    }
+    .container{
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .content{
+        width: auto;
+        height:auto;
+        border-radius: 15px;
+    }
+    .content h2{
+        font-size: 2.5rem;
+    }
+    .content h4{
+        font-size: 1.5rem;
+    }
+    .part-one a,.part-two a{
+        width: 80%;
+        font-size: 1.4rem;
+        padding: 1.5rem 0.1rem;
+    }
+}
