@@ -8,7 +8,8 @@
     --white-color: #fff;
     --white-smok-color: #f8f8f8;
     --gray-link-color: #9b9b9b;
-    --gray-nav-link:#545454;
+    --gray-nav-link: #545454;
+    --gray-footer: #acacac;
     --size-navlink: 15px;
 }
 
@@ -33,7 +34,9 @@ body {
 a {
     text-decoration: none;
 }
-
+button{
+    font-family: dana-fanum;
+}
 h1, h2, h3, h4, ul, p {
     margin: 0;
 }
@@ -100,7 +103,7 @@ header .navbar ul button {
 
 header .navbar ul button a {
     color: var(--white-color);
-    padding: 1rem 3rem;
+    padding: 1rem 3.8rem;
     display: inline-block;
     font-size: 1.5rem;
 }
@@ -172,9 +175,13 @@ header .navbar ul button:hover {
     left: -5%;
 }
 
+main {
+    padding: 17% 0;
+}
+
 .main-container {
     width: 85%;
-    margin: 19% auto;
+    margin: auto;
 }
 
 .service h2 {
@@ -313,7 +320,7 @@ hr {
     background-size: cover;
     background-attachment: fixed;
     display: flex;
-    margin: -10% 0;
+    /* margin: -10% 0; */
     height: 180px;
     align-items: center;
     justify-content: space-evenly;
@@ -342,6 +349,11 @@ hr {
     height: 50px;
     background-color: var(--white-color);
     /* margin: 0 2rem; */
+}
+
+.driver-container {
+    width: 85%;
+    margin: 5% auto;
 }
 
 .driver {
@@ -425,17 +437,21 @@ hr {
     align-items: center;
     padding: 2.5% 0;
 }
-.bolg-detailes:hover{
-    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+
+.bolg-detailes:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
 }
+
 .bolg-detailes img {
     border-radius: 1.2rem;
     width: 83%;
 }
-.text-blog{
+
+.text-blog {
     width: 85%;
     margin: 1rem 0;
 }
+
 .bolg-detailes h3 {
     color: var(--gray-link-color);
     font-size: 2.2rem;
@@ -453,6 +469,155 @@ hr {
     text-align: justify;
 }
 
+.location {
+    background-image: url(../img/location.svg);
+    background-repeat: no-repeat;
+    background-color: var(--white-smok-color);
+    width: 100%;
+    height: 362px;
+    display: flex;
+    margin: -20% 0;
+}
+
+.location-container {
+    width: 80%;
+    margin: 3% auto;
+}
+
+.location-container h2 {
+    font-size: 3.5rem;
+}
+
+.city-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3% 0
+}
+
+.city {
+    width: 12%;
+    margin: .5rem 0;
+}
+
+.city h3:first-child {
+    font-size: 1.8rem;
+    font-weight: 100;
+}
+
+.city h3:last-child {
+    font-size: 1.4rem;
+    font-weight: 100;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+
+footer {
+    height: 516px;
+    background-color: var(--black-color);
+}
+
+.footer-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 0;
+    flex-wrap: wrap;
+}
+
+.brands {
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+.brands img {
+    width: 14rem;
+    margin: 1rem 0;
+}
+
+.brands h5 {
+    color: var(--white-color);
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.brands p {
+    color: var(--gray-footer);
+    white-space: pre-line;
+}
+
+.menu-link {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1%;
+}
+
+.menu-link h4 {
+    font-size: 1.8rem;
+    color: var(--white-color);
+    margin: 1.5rem 0;
+}
+
+.menu-link a {
+    font-size: 1.4rem;
+    color: var(--white-color);
+    margin: .4rem 0;
+}
+
+.menu-link a:hover {
+    color: var(--orange-color);
+}
+
+.symbol {
+    display: flex;
+}
+
+.symbol a {
+    width: 80px;
+    display: block;
+    background-color: var(--white-color);
+    border-radius: 12px;
+    margin: 0 0.5rem;
+}
+
+.symbol a img {
+    border-radius: 12px;
+}
+.social{
+    width: 83%;
+    margin: -3.5rem auto;
+}
+.social h5{
+    color: var(--white-color);
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 30px;
+}
+.social p{
+    display: none;
+}
+.social ul{
+    display: flex;
+}
+.social ul a{
+    width: 3%;
+}
+.social ul a img{
+    height: 3rem;
+    width: 2.4rem;
+}
+#icon-Facebook{
+    width: 1.1rem;
+}
+#icon-Instagram{
+    width: 2.1rem;
+}
+#icon-Twitter , #icon-Telegram{
+    width: 2.4rem;
+}
+#icon-LinkedIn{
+    width: 2.2rem;
+}
 @media screen and (max-width:1246px) {
     .corporate {
         align-items: center;
@@ -460,6 +625,9 @@ hr {
 
     .description h2 {
         width: 90%
+    }
+    .social ul a{
+        width: 4%;
     }
 }
 
@@ -490,6 +658,7 @@ hr {
     .description p {
         word-spacing: normal;
     }
+
 }
 
 @media screen and (max-width:768px) {
@@ -550,8 +719,12 @@ hr {
         padding: 1.5rem 0.1rem;
     }
 
+    main {
+        padding: 0;
+    }
+
     .main-container {
-        width: 98%;
+        width: 90%;
         margin: auto;
     }
 
@@ -640,6 +813,10 @@ hr {
         font-weight: 100;
     }
 
+    .driver-container {
+        width: 98%;
+    }
+
     .driver {
         margin: 10% 0;
         flex-direction: column-reverse;
@@ -682,23 +859,71 @@ hr {
     .driver img {
         width: 90%;
     }
-    .blog h2{
+
+    .blog h2 {
         font-size: 2.2rem;
     }
-    .box-blog{
+
+    .box-blog {
         flex-direction: column;
         margin: 9% 0;
     }
-    .bolg-detailes img{
+
+    .bolg-detailes img {
         width: 100%;
     }
-    .text-blog{
+
+    .text-blog {
         width: 90%;
     }
-    .bolg-detailes h3{
+
+    .bolg-detailes h3 {
         font-size: 1.6rem;
     }
-    .bolg-detailes p{
+
+    .bolg-detailes p {
         font-size: 1.4rem;
     }
+
+    .location {
+        display: none;
+    }
+    footer{
+        height: 117rem;
+    }
+    .footer-container{
+        width: 95%;
+        flex-direction: column;
+    }
+    .brands p{
+        display: none;
+    }
+    .menu-link{
+        margin: 0;
+    }
+    .symbol{
+        justify-content: space-between;
+        margin: 1rem 0;
+    }
+    .social{
+        width: 96%;
+        margin: auto;
+    }
+    .social h5{
+        display: none;
+    }
+    .social p{
+        color: var(--gray-footer);
+        font-size: 1.4rem;
+        display: block;
+    }
+    .symbol a{
+        width: 120px;
+        height: 130px;
+    }
+    .social ul{
+        justify-content: space-evenly;
+        margin: 3% 0;
+    }
+    
 }
